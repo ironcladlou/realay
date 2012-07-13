@@ -1,5 +1,5 @@
 realay
-======
+######
 
 ReaLay is a plugin for the Reaper DAW that works in conjunction with Dropbox to allow seamless collaboration of Reaper projects. Press a button and start where your friends left off.
 
@@ -41,47 +41,47 @@ In the test demonstrated below, I am using a temporary directory and some sample
 
 Hopefully somebody else will find it useful.
 
-=== Step 1 ===
+### Step 1 ###
 
 Create your shared projects in the dropbox folder. _All media must be in the project directory_. Portable project files are key. They'll then appear in ReaLay as "non-projects."
 
-=== Step 2 ===
+### Step 2 ###
 
 Open ReaLay
 
 `(todo: find/add old image)`
 
-=== Step 3 ===
+### Step 3 ###
 
 Select your new project directory, and make it a ReaLay project.
 
 `(todo: find/add old image)`
 
-=== Step 4 ===
+### Step 4 ###
 
 At this point, every collaborator will see the new project (thanks to Dropbox synchronizing the metadata). Anybody can now check out the project.
 
 `(todo: find/add old image)`
 
-=== Step 5 ===
+### Step 5 ###
 
-When checking out, you'll be prompted to confirm as the operation is destructive. Whatever's in the `master` version will by synced to your local project directory (which will be created if it doesn't exist). This step tries its best to post-process the local `.RPP` file to massage paths to your local configuration.
+When checking out, you'll be prompted to confirm as the operation is destructive. Whatever's in the master version will by synced to your local project directory (which will be created if it doesn't exist). This step tries its best to post-process the local `.RPP` file to massage paths to your local configuration.
 
 `(todo: find/add old image)`
 
-=== Step 6 ===
+### Step 6 ###
 
 The project is now checked out *exclusively to you*. Nobody else can check it out until you check it back in. It's now time to open up your local version of the project and do some recording.
 
 `(todo: find/add old image)`
 
-=== Step 7 ===
+### Step 7 ###
 
 Now you've finished making your changes, so you open ReaLay to check them back in. As you can see, while we were working, somebody added a new project, and `James` started working on another. Select your project and check it in.
 
 `(todo: find/add old image)`
 
-=== Step 8 ===
+### Step 8 ###
 
 You'll be prompted to confirm, as this will replace the `master` project with your local copy.
 
@@ -91,7 +91,7 @@ As an added safety measure, ReaLay will attempt to close all open projects prior
 
 `(todo: find/add old image)`
 
-=== Step 9 ===
+### Step 9 ###
 
 All done! Your changes are pushed out to Dropbox and there is a new master copy for anybody else to check out and work with.
 
