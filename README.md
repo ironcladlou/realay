@@ -20,8 +20,11 @@ Requirements
 
 Installation
 ------------
-1. Copy this script to the `[reaper local config]/Scripts` directory
-2. Create a realay-prefs.py file in the same directory (use `realay-prefs.example.py` as a reference)
+1. Download the source
+  * using Git: `git clone https://github.com/ironcladlou/realay.git`
+  * as a zip: https://github.com/ironcladlou/realay/zipball/master
+1. Copy `realay.py` to the `[reaper local config]/Scripts` directory
+2. Create a new preferences file named `realay-prefs.py` in the same directory (use `realay-prefs.example.py` as a reference)
 3. Invoke the plugin as a ReaScript action bound to whatever UI trigger you want (e.g., a toolbar button)
 
 Using ReaLay
