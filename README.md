@@ -12,7 +12,8 @@ What It Does
 
 Requirements
 ------------
-* Python 3.1+
+* Reaper 4.261 (May work in other versions, untested)
+* Python 3.2 (May be compatible with 3.3+, untested)
 * Dropbox
 * Each collaborator to have VERY similar Reaper setups (same plugins, etc)
 * Some conventions (a .RPP filename which matches the project directory, centralized location for local/remote mirror, etc)
@@ -23,8 +24,8 @@ Installation
 1. Download the source
   * using Git: `git clone https://github.com/ironcladlou/realay.git`
   * as a zip: https://github.com/ironcladlou/realay/zipball/master
-1. Copy `realay.py` to the `[reaper local config]/Scripts` directory
-2. Create a new preferences file named `realay-prefs.py` in the same directory (use `realay-prefs.example.py` as a reference)
+1. Copy `realay.py` to the `%APPDATA%/REAPER/Scripts` directory
+2. Create a new preferences file named `%HOMEPATH%/.realayprefs` (use `realayprefs.example` as a reference)
 3. Invoke the plugin as a ReaScript action bound to whatever UI trigger you want (e.g., a toolbar button)
 
 Using ReaLay

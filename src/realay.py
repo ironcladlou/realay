@@ -14,13 +14,13 @@ import sys
 import traceback
 import distutils.dir_util
 import re
+import json
 from tkinter import *
+
 sys.argv=["Main"]
 
-RPR_include("realay-prefs.py")
-
+# Constants
 COMMAND_CLOSE_ALL_PROJECTS=40886
-
 APP_NAME = "ReaLay"
 
 def safelog(msg):
@@ -501,7 +501,15 @@ gui = None
 
 try:
 	# initialize user prefs
-	prefs = Prefs(userprefs)
+	prefs = None
+	
+	try:
+		prefs_path = os.path.join(os.path.expanduser("~"), ".realayprefs")
+		prefs_file = open(prefs_path, encoding="utf-8")
+		prefs_hash = json.load(prefs_file)
+		prefs = Prefs(prefs_hash)
+	except Exception as ex:
+		raise Exception("Couldn't load preferences from ~/.realayprefs")
 
 	# initialize logger
 	logger = Logger(prefs)
@@ -518,8 +526,8 @@ try:
 	gui.mainloop()
 
 	logger.log("exiting gracefully")
-except:
-	safelog("exiting due to exception")
+except Exception as ex:
+	safelog("exiting due to exception: " + str(ex))
 	raise
 finally:
 	try:
